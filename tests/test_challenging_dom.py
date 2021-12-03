@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 from pages.challenging_dom import ChallengingDomPage
 
 
+@pytest.mark.ui
 class Test_Challenging_Dom(BasePage):
 
     def test_challengin_dom(self):
