@@ -21,7 +21,9 @@ def browser_init(request):
         web_driver = webdriver.Edge(edge_path)
         # dvr = driver()
     request.cls.driver = web_driver
-    return request.cls.driver
+    # return request.cls.driver
+    # yield
+    # web_driver.close()
 
 
 def access_url(self):
@@ -31,6 +33,7 @@ def access_url(self):
 @pytest.fixture(scope="session")
 def env(request):
     return request.config.getoption("--env")
+
 
 @pytest.fixture(scope="session")
 def app_config(env):

@@ -84,3 +84,18 @@ class TheInternetHeroKuAppPage(BasePage):
         dynamic_control_element_pg_loaded = Locator(by=By.CSS_SELECTOR, value="div[class='example'] h4")
         return BaseElement(driver=self.driver, locator=dynamic_control_element_pg_loaded)
 
+    @property
+    def entry_ad_ele_link(self):
+        entry_ad_element_lnk = Locator(by=By.CSS_SELECTOR, value="a[href='/entry_ad']")
+        return BaseElement(driver=self.driver, locator=entry_ad_element_lnk)
+
+    @property
+    def entry_ad_pg_loaded(self):
+        entry_ad_element_pg_loaded = Locator(by=By.CSS_SELECTOR, value="div[class='example'] h3")
+        return BaseElement(driver=self.driver, locator=entry_ad_element_pg_loaded)
+
+    @property
+    def entry_ad_modal_loaded(self):
+        entry_ad_modal_pg_loaded = Locator(by=By.CSS_SELECTOR, value="div[class='example'] h4")
+        return BaseElement(driver=self.driver, locator=entry_ad_modal_pg_loaded)
+
