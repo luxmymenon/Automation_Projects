@@ -60,4 +60,10 @@ class Test_Internet_Heroku_App(BasePage):
         entry_ad_ele.entry_ad_ele_link.click()
         assert "Entry Ad" in entry_ad_ele.entry_ad_pg_loaded.text
 
+    def test_frame_element_link(self):
+        frame_ele = TheInternetHeroKuAppPage(self.driver)
+        frame_ele.access_url()
+        frame_ele.frame_link.click()
+        assert "Frames" in frame_ele.frame_page_loaded.text
+
 

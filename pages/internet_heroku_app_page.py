@@ -99,3 +99,13 @@ class TheInternetHeroKuAppPage(BasePage):
         entry_ad_modal_pg_loaded = Locator(by=By.CSS_SELECTOR, value="div[class='example'] h4")
         return BaseElement(driver=self.driver, locator=entry_ad_modal_pg_loaded)
 
+    @property
+    def frame_link(self):
+        frame_element_lnk = Locator(by=By.CSS_SELECTOR, value="a[href='/frames']")
+        return BaseElement(driver=self.driver, locator=frame_element_lnk)
+
+    @property
+    def frame_page_loaded(self):
+        frame_pg_loaded = Locator(by=By.CSS_SELECTOR, value="div[class='example'] h3")
+        return BaseElement(driver=self.driver, locator=frame_pg_loaded)
+

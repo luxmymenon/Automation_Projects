@@ -4,6 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.support.ui import Select
 
+
 class BaseElement(object):
 
     def __init__(self, driver, locator):
@@ -68,7 +69,9 @@ class BaseElement(object):
         select_item = Select(self.driver(element))
         return select_item
 
-
+    def iframe_switch_item(self):
+        element = WebDriverWait(self.driver, 10).until(EC.frame_to_be_available_and_switch_to_it(self.locator))
+        return element
 
     # def drag_drop_do(self, ele1, ele2):
     #     # action_chain = ActionChains(self.driver)
